@@ -71,9 +71,9 @@
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block"><sup>1</sup> Institution Name</span><br>
-                    <span class="author-block"><sup>2</sup> Institution Name</span><br>
-                    <span class="author-block"><sup>3</sup>Institution Name</span>
+                    <span class="author-block"><sup>1</sup> Acoustics Lab, Dpt. of Information and Communications Engineering, Aalto University, Finland </span><br>
+                    <span class="author-block"><sup>2</sup> Dpt. of Electronic Systems, Norwegian University of Science and Technology, Norway</span><br>
+                    <span class="author-block"><sup>3</sup>Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU), Germany</span>
                     <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
                   </div>
 
@@ -81,7 +81,7 @@
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -128,7 +128,18 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            
+            In multi-room environments, modelling the sound propagation is complex due to the coupling of rooms and diverse
+            source-receiver positions. A common scenario is when the source and the receiver are in different rooms without a
+            clear line of sight. For such source-receiver configurations, an initial increase in energy is observed, referred to as
+            the “fade-in” of reverberation. Based on recent work of representing inhomogeneous and anisotropic reverberation
+            with common decay times, this work proposes an extended parametric model that enables the modelling of the
+            fade-in phenomenon. The method performs fitting on the envelopes, instead of energy decay functions, and allows
+            negative amplitudes of decaying exponentials. We evaluate the method on simulated and measured multi-room
+            environments, where we show that the proposed approach can now model the fade-ins that were unrealisable with
+            the previous method.
+
+
           </p>
         </div>
       </div>
@@ -139,11 +150,17 @@
 
 
 <section class="section">
+  
     <div class="container is-max-desktop">
-        <div class="columns is-centered has-text-centered">
 
+      <h2 class="title is-5">Simulation data</h2>
+      
+        <!-- <div class="columns is-centered has-text-centered">
             <hr/>
-            <p>Description</p>
+            
+            
+            <img src="static/images/L1_pos45.png" width="400px" height="50px"  alt="L1_pos49"/> 
+
             <table>
                 <tr>
                     <th> Measured </th>
@@ -151,9 +168,18 @@
                     <th> Pos-only </th>
                 </tr>
                 <tr> 
-                    <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="static/test.wav" type="audio/mpeg"></audio> </th>
-                    <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="static/test.wav" type="audio/mpeg"></audio> </th>
-                    <th> <audio controls id="player" onplay="pauseOthers(this);"><source src="static/test.wav" type="audio/mpeg"></audio> </th>
+                    <td> 
+                      <img src="static/images/RIR17_original.png" alt=""/> 
+                      <audio controls id="player" onplay="pauseOthers(this);"><source src="static/images/RIR17_original.wav" type="audio/mpeg"></audio> 
+                    </td>
+                    <td> 
+                      <img src="static/images/RIR17_neg.png" alt=""/> 
+                      <audio controls id="player" onplay="pauseOthers(this);"><source src="static/images/RIR17_neg.wav" type="audio/mpeg"></audio> 
+                    </td>
+                    <td> 
+                      <img src="static/images/RIR17_pos.png" alt=""/> 
+                      <audio controls id="player" onplay="pauseOthers(this);"><source src="static/images/RIR17_pos.wav" type="audio/mpeg"></audio> 
+                    </td>
                 </tr>
                 <tr> 
                     <th><small></small></th>
@@ -161,7 +187,343 @@
                     <th><small></small></th>
                 </tr>
             </table>
-        </div>
+
+        </div> -->
+
+        <div class="columns is-centered has-text-centered">
+          <hr/>
+        
+
+            <table>
+                <tr>
+                    <th> Measured </th>
+                    <th> Fade-in </th>
+                    <th> Pos-only </th>
+                </tr>
+                <tr> 
+                    <td> 
+                      <img src="static/images/simRIR776_original.png" alt=""/> 
+                      <audio controls id="player" onplay="pauseOthers(this);"><source src="static/images/simRIR776_original.wav" type="audio/mpeg"></audio> 
+                    </td>
+                    <td> 
+                      <img src="static/images/simRIR776_neg.png" alt=""/> 
+                      <audio controls id="player" onplay="pauseOthers(this);"><source src="static/images/simRIR776_neg.wav" type="audio/mpeg"></audio> 
+                    </td>
+                    <td> 
+                      <img src="static/images/simRIR776_pos.png" alt=""/> 
+                      <audio controls id="player" onplay="pauseOthers(this);"><source src="static/images/simRIR776_pos.wav" type="audio/mpeg"></audio> 
+                    </td>
+                </tr>
+                <tr> 
+                    <th><small></small></th>
+                    <th><small></small></th>
+                    <th><small></small></th>
+                </tr>
+            </table>
+
+      </div>
+
+      <div class="columns is-centered has-text-centered">
+        <hr/>
+      
+
+          <table>
+              <tr>
+                  <th> Measured </th>
+                  <th> Fade-in </th>
+                  <th> Pos-only </th>
+              </tr>
+              <tr> 
+                  <td> 
+                    <img src="static/images/simRIR828_original.png" alt=""/> 
+                    <audio controls id="player" onplay="pauseOthers(this);"><source src="static/images/simRIR828_original.wav" type="audio/mpeg"></audio> 
+                  </td>
+                  <td> 
+                    <img src="static/images/simRIR828_neg.png" alt=""/> 
+                    <audio controls id="player" onplay="pauseOthers(this);"><source src="static/images/simRIR828_neg.wav" type="audio/mpeg"></audio> 
+                  </td>
+                  <td> 
+                    <img src="static/images/simRIR828_pos.png" alt=""/> 
+                    <audio controls id="player" onplay="pauseOthers(this);"><source src="static/images/simRIR828_pos.wav" type="audio/mpeg"></audio> 
+                  </td>
+              </tr>
+              <tr> 
+                  <th><small></small></th>
+                  <th><small></small></th>
+                  <th><small></small></th>
+              </tr>
+          </table>
+
+      </div>
+
+        <div class="columns is-centered has-text-centered">
+          <hr/>
+        
+
+            <table>
+                <tr>
+                    <th> Measured </th>
+                    <th> Fade-in </th>
+                    <th> Pos-only </th>
+                </tr>
+                <tr> 
+                    <td> 
+                      <img src="static/images/simRIR815_original.png" alt=""/> 
+                      <audio controls id="player" onplay="pauseOthers(this);"><source src="static/images/simRIR815_original.wav" type="audio/mpeg"></audio> 
+                    </td>
+                    <td> 
+                      <img src="static/images/simRIR815_neg.png" alt=""/> 
+                      <audio controls id="player" onplay="pauseOthers(this);"><source src="static/images/simRIR815_neg.wav" type="audio/mpeg"></audio> 
+                    </td>
+                    <td> 
+                      <img src="static/images/simRIR815_pos.png" alt=""/> 
+                      <audio controls id="player" onplay="pauseOthers(this);"><source src="static/images/simRIR815_pos.wav" type="audio/mpeg"></audio> 
+                    </td>
+                </tr>
+                <tr> 
+                    <th><small></small></th>
+                    <th><small></small></th>
+                    <th><small></small></th>
+                </tr>
+            </table>
+
+      </div>
+
+      <div class="columns is-centered has-text-centered">
+        <hr/>
+      
+
+          <table>
+              <tr>
+                  <th> Measured </th>
+                  <th> Fade-in </th>
+                  <th> Pos-only </th>
+              </tr>
+              <tr> 
+                  <td> 
+                    <img src="static/images/simRIR645_original.png" alt=""/> 
+                    <audio controls id="player" onplay="pauseOthers(this);"><source src="static/images/simRIR645_original.wav" type="audio/mpeg"></audio> 
+                  </td>
+                  <td> 
+                    <img src="static/images/simRIR645_neg.png" alt=""/> 
+                    <audio controls id="player" onplay="pauseOthers(this);"><source src="static/images/simRIR645_neg.wav" type="audio/mpeg"></audio> 
+                  </td>
+                  <td> 
+                    <img src="static/images/simRIR645_pos.png" alt=""/> 
+                    <audio controls id="player" onplay="pauseOthers(this);"><source src="static/images/simRIR645_pos.wav" type="audio/mpeg"></audio> 
+                  </td>
+              </tr>
+              <tr> 
+                  <th><small></small></th>
+                  <th><small></small></th>
+                  <th><small></small></th>
+              </tr>
+          </table>
+
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <hr/>
+
+
+        <table>
+            <tr>
+                <th> Measured </th>
+                <th> Fade-in </th>
+                <th> Pos-only </th>
+            </tr>
+            <tr> 
+                <td> 
+                  <img src="static/images/simRIR730_original.png" alt=""/> 
+                  <audio controls id="player" onplay="pauseOthers(this);"><source src="static/images/simRIR730_original.wav" type="audio/mpeg"></audio> 
+                </td>
+                <td> 
+                  <img src="static/images/simRIR730_neg.png" alt=""/> 
+                  <audio controls id="player" onplay="pauseOthers(this);"><source src="static/images/simRIR730_neg.wav" type="audio/mpeg"></audio> 
+                </td>
+                <td> 
+                  <img src="static/images/simRIR730_pos.png" alt=""/> 
+                  <audio controls id="player" onplay="pauseOthers(this);"><source src="static/images/simRIR730_pos.wav" type="audio/mpeg"></audio> 
+                </td>
+            </tr>
+            <tr> 
+                <th><small></small></th>
+                <th><small></small></th>
+                <th><small></small></th>
+            </tr>
+        </table>
+    </div>
+
+
+
+    <br>
+    <h2 class="title is-5">Measurement data</h2>
+
+    <div class="columns is-centered has-text-centered">
+      <hr/>
+
+
+        <table>
+            <tr>
+                <th> Measured </th>
+                <th> Fade-in </th>
+                <th> Pos-only </th>
+            </tr>
+            <tr> 
+                <td> 
+                  <img src="static/images/LS0_pos49_original.png" alt=""/> 
+                  <audio controls id="player" onplay="pauseOthers(this);"><source src="static/images/LS0_pos49_original.wav" type="audio/mpeg"></audio> 
+                </td>
+                <td> 
+                  <img src="static/images/LS0_pos49_neg.png" alt=""/> 
+                  <audio controls id="player" onplay="pauseOthers(this);"><source src="static/images/LS0_pos49_neg.wav" type="audio/mpeg"></audio> 
+                </td>
+                <td> 
+                  <img src="static/images/LS0_pos49_pos.png" alt=""/> 
+                  <audio controls id="player" onplay="pauseOthers(this);"><source src="static/images/LS0_pos49_pos.wav" type="audio/mpeg"></audio> 
+                </td>
+            </tr>
+            <tr> 
+                <th><small></small></th>
+                <th><small></small></th>
+                <th><small></small></th>
+            </tr>
+        </table>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <hr/>
+
+
+        <table>
+            <tr>
+                <th> Measured </th>
+                <th> Fade-in </th>
+                <th> Pos-only </th>
+            </tr>
+            <tr> 
+                <td> 
+                  <img src="static/images/LS0_pos61_original.png" alt=""/> 
+                  <audio controls id="player" onplay="pauseOthers(this);"><source src="static/images/LS0_pos61_original.wav" type="audio/mpeg"></audio> 
+                </td>
+                <td> 
+                  <img src="static/images/LS0_pos61_neg.png" alt=""/> 
+                  <audio controls id="player" onplay="pauseOthers(this);"><source src="static/images/LS0_pos61_neg.wav" type="audio/mpeg"></audio> 
+                </td>
+                <td> 
+                  <img src="static/images/LS0_pos61_pos.png" alt=""/> 
+                  <audio controls id="player" onplay="pauseOthers(this);"><source src="static/images/LS0_pos61_pos.wav" type="audio/mpeg"></audio> 
+                </td>
+            </tr>
+            <tr> 
+                <th><small></small></th>
+                <th><small></small></th>
+                <th><small></small></th>
+            </tr>
+        </table>
+    </div>
+
+
+
+    <div class="columns is-centered has-text-centered">
+      <hr/>
+
+
+        <table>
+            <tr>
+                <th> Measured </th>
+                <th> Fade-in </th>
+                <th> Pos-only </th>
+            </tr>
+            <tr> 
+                <td> 
+                  <img src="static/images/LS1_pos23_original.png" alt=""/> 
+                  <audio controls id="player" onplay="pauseOthers(this);"><source src="static/images/LS1_pos23_original.wav" type="audio/mpeg"></audio> 
+                </td>
+                <td> 
+                  <img src="static/images/LS1_pos23_neg.png" alt=""/> 
+                  <audio controls id="player" onplay="pauseOthers(this);"><source src="static/images/LS1_pos23_neg.wav" type="audio/mpeg"></audio> 
+                </td>
+                <td> 
+                  <img src="static/images/LS1_pos23_pos.png" alt=""/> 
+                  <audio controls id="player" onplay="pauseOthers(this);"><source src="static/images/LS1_pos23_pos.wav" type="audio/mpeg"></audio> 
+                </td>
+            </tr>
+            <tr> 
+                <th><small></small></th>
+                <th><small></small></th>
+                <th><small></small></th>
+            </tr>
+        </table>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <hr/>
+
+
+        <table>
+            <tr>
+                <th> Measured </th>
+                <th> Fade-in </th>
+                <th> Pos-only </th>
+            </tr>
+            <tr> 
+                <td> 
+                  <img src="static/images/LS1_pos54_original.png" alt=""/> 
+                  <audio controls id="player" onplay="pauseOthers(this);"><source src="static/images/LS1_pos54_original.wav" type="audio/mpeg"></audio> 
+                </td>
+                <td> 
+                  <img src="static/images/LS1_pos54_neg.png" alt=""/> 
+                  <audio controls id="player" onplay="pauseOthers(this);"><source src="static/images/LS1_pos54_neg.wav" type="audio/mpeg"></audio> 
+                </td>
+                <td> 
+                  <img src="static/images/LS1_pos54_pos.png" alt=""/> 
+                  <audio controls id="player" onplay="pauseOthers(this);"><source src="static/images/LS1_pos54_pos.wav" type="audio/mpeg"></audio> 
+                </td>
+            </tr>
+            <tr> 
+                <th><small></small></th>
+                <th><small></small></th>
+                <th><small></small></th>
+            </tr>
+        </table>
+    </div>
+
+
+
+
+    <div class="columns is-centered has-text-centered">
+      <hr/>
+
+
+        <table>
+            <tr>
+                <th> Measured </th>
+                <th> Fade-in </th>
+                <th> Pos-only </th>
+            </tr>
+            <tr> 
+                <td> 
+                  <img src="static/images/LS2_pos31_original.png" alt=""/> 
+                  <audio controls id="player" onplay="pauseOthers(this);"><source src="static/images/LS2_pos31_original.wav" type="audio/mpeg"></audio> 
+                </td>
+                <td> 
+                  <img src="static/images/LS2_pos31_neg.png" alt=""/> 
+                  <audio controls id="player" onplay="pauseOthers(this);"><source src="static/images/LS2_pos31_neg.wav" type="audio/mpeg"></audio> 
+                </td>
+                <td> 
+                  <img src="static/images/LS2_pos31_pos.png" alt=""/> 
+                  <audio controls id="player" onplay="pauseOthers(this);"><source src="static/images/LS2_pos31_pos.wav" type="audio/mpeg"></audio> 
+                </td>
+            </tr>
+            <tr> 
+                <th><small></small></th>
+                <th><small></small></th>
+                <th><small></small></th>
+            </tr>
+        </table>
+    </div>
+
     </div>
 </section>
 
@@ -171,7 +533,13 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>@conference{Lee2024FadeIn,
+          title = {Fade-in Reverberation in Multi-room Environments Using the Common-Slope Model},
+          author = {Lee, Kyung Yun and Meyer-Kahlen, Nils and Götz, Georg and Svensson, U. Peter and Schlecht, Sebastian J. and Välimäki, Vesa },
+          booktitle = {2024 AES 5th International Conference on Audio for Virtual and Augmented Reality},
+          month = {Aug},
+          year = {2024},
+          }</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->

@@ -25,7 +25,7 @@
 
 
   <title>Fade-in Reverberation in Multi-room Environments Using the Common-Slope Model</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -43,6 +43,39 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+
+
+  <style>
+
+    .video-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px; /* Optional: Adds space between the videos */
+    }
+    .video-wrapper {
+        flex: 1;
+    }
+    video {
+        width: 100%;
+        height: auto;
+    }
+
+    .image-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%; /* Full height of the container */
+      width: 100%; /* Full width of the container */
+    }
+
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+    }
+
+  </style>
+
+
 </head>
 <body>
 
@@ -81,7 +114,7 @@
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="" target="_blank"
+                        <a href="https://arxiv.org/abs/2407.13242" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -101,9 +134,9 @@
                   </a>
                 </span>
 
-                <!-- ArXiv abstract Link
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                <!-- ArXiv abstract Link -->
+                <!-- <span class="link-block">
+                  <a href="https://arxiv.org/abs/2407.13242" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
@@ -152,8 +185,10 @@
 <section class="section">
   
     <div class="container is-max-desktop">
+      
+      <h2 class="title is-5 has-text-centered" style="color:red">Site is under construction!</h2>
 
-      <h2 class="title is-5">Simulation data</h2>
+      <h2 class="title is-4 has-text-centered">Fitting examples of simulation data</h2>
       
         <!-- <div class="columns is-centered has-text-centered">
             <hr/>
@@ -354,10 +389,16 @@
         </table>
     </div>
 
+</section>
 
+
+
+<section class="section">
+  
+  <div class="container is-max-desktop">
 
     <br>
-    <h2 class="title is-5">Measurement data</h2>
+    <h2 class="title is-4 has-text-centered">Fitting examples of measurement data</h2>
 
     <div class="columns is-centered has-text-centered">
       <hr/>
@@ -523,6 +564,69 @@
             </tr>
         </table>
     </div>
+
+
+</section>
+
+<section class="section">
+  
+  <div class="container is-max-desktop">
+
+    <h2 class="title is-4 has-text-centered">Binaural rendering of measurement data</h2>
+
+    <div class="image-container">
+      <img style="width:50%" src="static/images/hallway-lecturehall_map.png" alt="Centered Image">
+    </div>
+
+
+    <hr/>
+    
+
+    <h2 class="title is-6 is-centered">Loudspeaker near the stairwell is active (L1)</h2>
+
+    <div class="video-container">
+      <div class="video-wrapper">
+        <p>With measured RIRs</p>
+          <video controls>
+              <source src="static/videos/rendered_original_ls0_pos0_48.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+          
+      </div>
+      <div class="video-wrapper">
+        <p>With fade-in model RIRs</p>
+          <video controls>
+              <source src="static/videos/rendered_neg_ls0_pos0_48.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+          
+      </div>
+  </div>
+
+  <hr/>
+
+
+
+  <h2 class="title is-6 is-centered">Loudspeaker in the meeting room is active (L2)</h2>
+
+  <div class="video-container">
+    <div class="video-wrapper">
+        <p>With measured RIRs</p>
+        <video controls>
+            <source src="static/videos/rendered_original_ls1_pos30_60.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+    </div>
+    <div class="video-wrapper">
+        <p>With fade-in model RIRs</p>
+        <video controls>
+            <source src="static/videos/rendered_neg_ls1_pos30_60.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+    </div>
+  </div>
 
     </div>
 </section>
